@@ -86,6 +86,11 @@ npx prisma migrate dev
 6. **Place CSV files in the data directory**
 
 CSV files must follow the naming convention:
+
+> ⚠️ CSV data files are not included in this repository due to 
+> file size (102MB). Place your activity CSV files in `src/data/` 
+> before running the seed script.
+
 ```
 src/data/activities_YYYYMMDD.csv
 ```
