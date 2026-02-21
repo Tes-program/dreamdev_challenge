@@ -117,8 +117,8 @@ amount across all products.
 **Response:**
 ```json
 {
-  "merchant_id": "MRC-001234",
-  "total_volume": 98765432.10
+    "merchant_id": "MRC-009405",
+    "total_volume": 181479333.57
 }
 ```
 
@@ -131,9 +131,8 @@ event per month.
 **Response:**
 ```json
 {
-  "2024-01": 8234,
-  "2024-02": 8456,
-  "2024-12": 9102
+    "2023-12": 244,
+    "2024-01": 9847
 }
 ```
 
@@ -145,9 +144,13 @@ Returns unique merchant count per product, sorted by count descending.
 **Response:**
 ```json
 {
-  "POS": 15234,
-  "AIRTIME": 12456,
-  "BILLS": 10234
+    "BILLS": 4379,
+    "SAVINGS": 4368,
+    "POS": 4348,
+    "AIRTIME": 4277,
+    "MONIEBOOK": 4267,
+    "CARD_PAYMENT": 4233,
+    "KYC": 4167
 }
 ```
 
@@ -160,9 +163,9 @@ for successful events only.
 **Response:**
 ```json
 {
-  "documents_submitted": 5432,
-  "verifications_completed": 4521,
-  "tier_upgrades": 3890
+    "documents_submitted": 3760,
+    "verifications_completed": 3389,
+    "tier_upgrades": 2496
 }
 ```
 
@@ -174,7 +177,15 @@ PENDING events are excluded. Sorted by rate descending.
 
 **Response:**
 ```json
-[{ "product": "BILLS", "failure_rate": 5.2 }, { "product": "AIRTIME", "failure_rate": 4.1 }]
+[
+  { "product": "BILLS", "failure_rate": 5.3 },
+  { "product": "AIRTIME", "failure_rate": 5.2 },
+  { "product": "CARD_PAYMENT", "failure_rate": 5.2 },
+  { "product": "KYC", "failure_rate": 5.2 },
+  { "product": "MONIEBOOK", "failure_rate": 5.2 },
+  { "product": "POS", "failure_rate": 5.2 },
+  { "product": "SAVINGS", "failure_rate": 5.2 }
+]
 ```
 
 ## Testing with cURL
