@@ -18,7 +18,7 @@
 
 This project is a backend service built with Node.js, Express, and TypeScript that processes merchant activity data from CSV files. It includes a script to seed the database with activity records, ensuring data integrity through validation and upsert operations. The service provides 5 endpoints to provide insights and analytics on merchant activities, such as monthly active merchants, channel distribution, and status breakdowns. 
 
-**Note**: Please read the personal notes at the end of this document for important context on assumptions made and challenges faced during development.
+**Note**: ⚠️ Please read the personal notes at the end of this document for important context on assumptions made and challenges faced during development.
 
 ## Tech Stack
 
