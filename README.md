@@ -62,6 +62,7 @@ cd
 ```bash
 npm install
 ```
+> Prisma client is generated automatically after install.
 
 3. **Configure environment**
 ```bash
