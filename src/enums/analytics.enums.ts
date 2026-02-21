@@ -1,0 +1,65 @@
+export enum Product {
+  POS = 'POS',
+  AIRTIME = 'AIRTIME',
+  BILLS = 'BILLS',
+  CARD_PAYMENT = 'CARD_PAYMENT',
+  SAVINGS = 'SAVINGS',
+  MONIEBOOK = 'MONIEBOOK',
+  KYC = 'KYC',
+}
+
+export enum Status {
+  SUCCESS = 'SUCCESS',
+  FAILED = 'FAILED',
+  PENDING = 'PENDING',
+}
+
+export enum Channel {
+  POS = 'POS',
+  APP = 'APP',
+  USSD = 'USSD',
+  WEB = 'WEB',
+  OFFLINE = 'OFFLINE',
+  // Fallback for malformed data or null data if any (doubt if this will be needed but just in case)
+  UNKNOWN = 'UNKNOWN',
+}
+
+export enum MerchantTier {
+  STARTER = 'STARTER',
+  VERIFIED = 'VERIFIED',
+  PREMIUM = 'PREMIUM',
+}
+
+export enum EventType {
+  // POS
+  CARD_TRANSACTION = 'CARD_TRANSACTION',
+  CASH_WITHDRAWAL = 'CASH_WITHDRAWAL',
+  TRANSFER = 'TRANSFER',
+  // AIRTIME
+  AIRTIME_PURCHASE = 'AIRTIME_PURCHASE',
+  DATA_PURCHASE = 'DATA_PURCHASE',
+  // BILLS
+  ELECTRICITY = 'ELECTRICITY',
+  CABLE_TV = 'CABLE_TV',
+  INTERNET = 'INTERNET',
+  WATER = 'WATER',
+  BETTING = 'BETTING',
+  // CARD_PAYMENT
+  SUPPLIER_PAYMENT = 'SUPPLIER_PAYMENT',
+  INVOICE_PAYMENT = 'INVOICE_PAYMENT',
+  // SAVINGS
+  DEPOSIT = 'DEPOSIT',
+  WITHDRAWAL = 'WITHDRAWAL',
+  INTEREST_CREDIT = 'INTEREST_CREDIT',
+  AUTO_SAVE = 'AUTO_SAVE',
+  // MONIEBOOK
+  SALE_RECORDED = 'SALE_RECORDED',
+  INVENTORY_UPDATE = 'INVENTORY_UPDATE',
+  EXPENSE_LOGGED = 'EXPENSE_LOGGED',
+  // KYC
+  DOCUMENT_SUBMITTED = 'DOCUMENT_SUBMITTED',
+  VERIFICATION_COMPLETED = 'VERIFICATION_COMPLETED',
+  TIER_UPGRADE = 'TIER_UPGRADE',
+  // Fallback for malformed data or null data if any (doubt if this will be needed but just in case)
+  UNKNOWN = 'UNKNOWN',
+}

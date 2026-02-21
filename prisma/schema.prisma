@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ActivityRecord {
+  event_id  String @id
+  merchant_id String
+  event_timestamp DateTime
+  product String
+  event_type String
+  amount Decimal @default(0) @db.Decimal(15,2)
+  status String
+  channel String
+  region String
+  merchant_tier String
+
+  // Creating indexes to improve query performance
+  @@index([merchant_id])
+  @@index([product])
+  @@index([status])
+  @@index([event_timestamp])
+  @@map("activity_record")
+}
